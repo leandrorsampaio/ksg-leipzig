@@ -1,0 +1,79 @@
+$txt-sm: 14px
+$txt-md: 16px
+$txt-lg: 24px
+$txt-xl: 48px
+
+@font-face
+    font-family: "MarkPro"
+    src: url('fonts/MarkPro-Light.woff2') format('woff2')
+    src: url('fonts/MarkPro-Light.woff') format('woff')
+    font-weight: 300
+
+@font-face
+    font-family: "MarkPro"
+    src: url('fonts/MarkPro.woff2') format('woff2')
+    src: url('fonts/MarkPro.woff') format('woff')
+    font-weight: 400
+
+@font-face
+    font-family: "MarkPro"
+    src: url('fonts/MarkPro-Medium.woff2') format('woff2')
+    src: url('fonts/MarkPro-Medium.woff') format('woff')
+    font-weight: 500
+
+@font-face
+    font-family: "MarkPro"
+    src: url('fonts/MarkPro-Bold.woff2') format('woff2')
+    src: url('fonts/MarkPro-Bold.woff') format('woff')
+    font-weight: 700
+
+@font-face
+    font-family: "MarkPro"
+    src: url('fonts/MarkPro-Black.woff2') format('woff2')
+    src: url('fonts/MarkPro-Black.woff') format('woff')
+    font-weight: 900
+
+a
+    text-decoration: none
+    color: $blue
+    cursor: pointer
+    font-weight: 700
+    display: flex
+    align-items: center
+    font-family: 'MarkPro', sans-serif
+    +fade(100ms)
+    &:hover
+        opacity: 0.5
+    img
+        margin-left: 15px
+
+p
+    color: $black
+    font-size: $txt-md
+    line-height: $txt-lg
+    margin-bottom: 20px
+
+h1
+    font-size: $txt-xl
+    font-weight: 700
+    margin-bottom: 20px
+    font-family: 'MarkPro', sans-serif
+    @media (max-width: 768px)
+        font-size: $txt-lg
+
+h2
+    font-size: $txt-lg
+    font-family: 'MarkPro', sans-serif
+    font-weight: 700
+    margin-bottom: 20px
+    @media (max-width: 768px)
+        font-size: $txt-md
+
+.text-left
+    text-align: left !important
+
+.text-center
+    text-align: center !important
+
+.text-right
+    text-align: right !important

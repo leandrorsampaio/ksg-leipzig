@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M22,12 C22,12.6 21.6,13 21,13 L3,13 C2.4,13 2,12.6 2,12 C2,11.4 2.4,11 3,11 L21,11 C21.6,11 22,11.4 22,12 Z M3,7 L21,7 C21.6,7 22,6.6 22,6 C22,5.4 21.6,5 21,5 L3,5 C2.4,5 2,5.4 2,6 C2,6.6 2.4,7 3,7 Z M21,17 L3,17 C2.4,17 2,17.4 2,18 C2,18.6 2.4,19 3,19 L21,19 C21.6,19 22,18.6 22,18 C22,17.4 21.6,17 21,17 Z" id="path-1"></path>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0---Home" transform="translate(-1459.000000, -844.000000)">
+            <g id="header" transform="translate(0.000000, 801.000000)">
+                <g id="menu-toggle" transform="translate(1457.000000, 38.000000)">
+                    <g id="icon-/-menu">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="color-/-gray-blackish" mask="url(#mask-2)" fill="#4A4A4A" fill-rule="evenodd">
+                            <rect id="Shape" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

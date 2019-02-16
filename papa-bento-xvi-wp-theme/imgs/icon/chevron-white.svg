@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.4666667,2.46666667 L6.46666667,6.4666667 C6.33333333,6.6 6.2,6.6666667 6,6.6666667 C5.8,6.6666667 5.66666667,6.6 5.53333333,6.4666667 L1.53333333,2.46666667 C1.26666667,2.2 1.26666667,1.8 1.53333333,1.53333333 C1.8,1.26666667 2.2,1.26666667 2.46666667,1.53333333 L6,5.06666667 L9.5333333,1.53333333 C9.8,1.26666667 10.2,1.26666667 10.4666667,1.53333333 C10.7333333,1.8 10.7333333,2.2 10.4666667,2.46666667 Z" id="path-1"></path>
+        <filter x="-37.5%" y="-46.9%" width="175.0%" height="231.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.150220788 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chevron">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
