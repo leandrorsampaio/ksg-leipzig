@@ -14,6 +14,7 @@
 
 
 
+
 if (isset($_GET['lang'])) {
   $langCode = $_GET['lang'];
 } else {
