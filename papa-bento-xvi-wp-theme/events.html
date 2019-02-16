@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    
+
     <div class="sidebar">
         <a id="menu-untoggle"><img src="imgs/icon/close.svg"></a>
         <ul class="" style="margin-top: 100px">
@@ -32,7 +32,7 @@
         <a href="#"><li>Services</li></a>
         <a href="#"><li>Data Protection</li></a>
     </div>
-    
+
     <!--Menu for desktop breakpoints-->
     <header>
         <div class="grid-width">
@@ -46,7 +46,7 @@
                     <a id="menu-toggle" class="margin-left-40"><img src="imgs/icon/menu.svg" class="menu-icon"><p>Menu</p></a>
                 </div>
                 <!--End of Desktop items for the menu-->
-                
+
                 <!--Mobile toggle for the menu-->
                 <div class="items_mobile">
                     <a id="menu-toggle-mobile"><img src="imgs/icon/menu.svg"></a>
@@ -55,7 +55,7 @@
         </div>
     </header>
     <!--End of Menu for desktop breakpoints-->
-    
+
     <!--Our next events section-->
     <section id="next_events_overview" class="full-width default_padding margin_header">
         <div class="grid-width">
@@ -63,7 +63,7 @@
             <h1 class="month_title">August 2018</h1>
             <!--Row of cards, overflow on mobile-->
             <div class="row row_margin">
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
             </div>
             <!--End of Row of cards, overflow on mobile-->
 
@@ -121,7 +121,7 @@
             <h1>September 2018</h1>
             <!--Row of cards, overflow on mobile-->
             <div class="row row_margin">
-                
+
                 <!--Event card-->
                 <div class="event_card card_type1" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card card_type2" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -154,7 +154,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card card_type3" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -165,11 +165,11 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
             </div>
             <!--End of Row of cards, overflow on mobile-->
             <!--Row of cards, overflow on mobile-->
-            
+
         </div>
     </section>
     <!--End of Our next events section-->
@@ -180,7 +180,7 @@
             <h1>October 2018</h1>
             <!--Row of cards, overflow on mobile-->
             <div class="row row_margin">
-                
+
                 <!--Event card-->
                 <div class="event_card" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
                 <!--Event card-->
                 <div class="event_card card_type4" onclick="location.href='events.html';">
                     <div class="subcontainer">
@@ -213,14 +213,14 @@
                     </div>
                 </div>
                 <!--End of Event card-->
-                
+
             </div>
             <!--End of Row of cards, overflow on mobile-->
-            
+
         </div>
     </section>
     <!--End of Our next events section-->
-    
+
     <footer class="full-width">
         <div class="grid-width">
             <div class="logo">
@@ -242,7 +242,7 @@
             <a href="#">Impressum</a>•<a href="#">Terms & Conditions</a>•<a href="#">Data Protection</a>
         </div>
     </footer>
-    
+
 </body>
 
 <script type="text/javascript">
@@ -252,14 +252,14 @@
         $('body').css('position',"fixed");
         console.log("Sidebar opened");
     });
-    
+
     $('#menu-toggle-mobile').on('click', function() {
         console.log("Click registered");
         $('.sidebar').addClass('sidebar__appear');
         $('body').css('position',"fixed");
         console.log("Sidebar opened");
     });
-    
+
     $('#menu-untoggle').on('click', function() {
         console.log("Click registered");
         $('.sidebar').removeClass('sidebar__appear');

@@ -16,14 +16,14 @@
 	    	$args = array(
 			'posts_per_page' => -1,
 			);
-			//Starts the query for News posts from FEATURED category	 
+			//Starts the query for News posts from FEATURED category
 			$article = new WP_Query( $args );
 			while ($article->have_posts()) : $article->the_post();
-	    	
+
 				//includes Programmer Module, with all the variables
 				include ('in_programmer.php');
 
-		
+
 				$final_content = get_field_object($lang_content);
 				$contentFeatured = $final_content['value'];
 			?>
@@ -32,15 +32,15 @@
 
 		        <a class="news__single <?php echo $news_class; ?>" href="<?php echo the_permalink();?><?php echo $languageURL; ?>">
 		            <h2>
-						<?php 
+						<?php
 						//tests if language is english
-						if ($language == 2) { 
+						if ($language == 2) {
 							echo $final_title['value'];
 						} else {
 						//or if languague is deutsche
 							the_title();
 						} ?>
-						<img src="<?php bloginfo('template_url');?>/imgs/icon/arrow-right.svg">
+						<img class="arrow-right-news-icon" src="<?php bloginfo('template_url');?>/imgs/icon/arrow-right.svg">
 						<!--//
 						//
 						//Colocar um if pra deixar a seta amarela quando tiver ocm a classe de destaque!
@@ -48,9 +48,9 @@
 						//-->
 		            </h2>
 
-		            <p><?php 
+		            <p><?php
 		            	//get the content and set a character limit to 200 characters and displays "..." in the end */
-		            echo mb_strimwidth($contentFeatured, 0, 200, "..."); 
+		            echo mb_strimwidth($contentFeatured, 0, 200, "...");
 		            ?></p>
 		        </a>
 
@@ -58,4 +58,4 @@
 
 	        	<hr>
 	    	<?php endwhile;
-		      wp_reset_query(); ?> 
+		      wp_reset_query(); ?>

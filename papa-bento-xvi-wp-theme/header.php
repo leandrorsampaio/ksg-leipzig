@@ -19,11 +19,26 @@
 	<link rel="icon" href="<?php bloginfo('template_url'); ?>/imgs/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/tinyslider.js"></script>
+
+
+
+		<script type="text/javascript">
+					// Test if there is lang code
+					var url = window.location.href;
+					if (url.indexOf('?') > -1){
+						 // yes, there is
+					} else {
+						// no, there is not. Redirect to DE Url
+						 url += '?lang=de';
+						 window.location.href = url;
+					}
+		</script>
+
+
+
 	<?php
     // includes WP_head
     wp_head();
-    //includes Programmer Module, with all the variables
-
 
 		$langCode = $_GET['lang'];
 
@@ -33,15 +48,17 @@
 				$languageCode = 'en';
 				$flag = 'lang-uk.svg';
 		} else {
-		    $language = 1; //DE (default)
-		    $languageURL = '?lang=de';
-				$languageCode = 'de';
-				$flag = 'lang-de.svg';
+				$language = 1; //DE (default)
+			 	$languageURL = '?lang=de';
+			 	$languageCode = 'de';
+			 	$flag = 'lang-de.svg';
 		}
-
-
-
     ?>
+
+
+
+
+
 </head>
 
 <body>
