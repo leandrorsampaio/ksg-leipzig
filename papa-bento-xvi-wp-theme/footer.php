@@ -119,13 +119,13 @@
                     $languageURLfooterlink1 = '?lang=de';
                 }
 
-                echo '<span class="desktop_only"><a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
+                echo '<span class=""><a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
 
                 endwhile;
                 wp_reset_query();
               ?>
 
-              •
+              <span class="desktop_only">•</span>
 
               <?php
                 $args = array(
@@ -145,13 +145,13 @@
                     $languageURLfooterlink1 = '?lang=de';
                 }
 
-                echo '<span class="desktop_only"><a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
+                echo '<span class=""><a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
 
                 endwhile;
                 wp_reset_query();
               ?>
 
-              •
+              <span class="desktop_only">•</span>
 
               <?php
                 $args = array(
@@ -171,7 +171,7 @@
                     $languageURLfooterlink1 = '?lang=de';
                 }
 
-                echo '<span class="desktop_only"> <a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
+                echo '<span class=""> <a href="' . get_the_permalink() . $languageURLfooterlink1 . '">' . $link1title . '</a></span>';
 
                 endwhile;
                 wp_reset_query();

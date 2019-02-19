@@ -51,12 +51,12 @@ Includes Programmer Module, with all the variables */
 <!--Our next events section-->
 <section id="next_events_overview" class="full-width default_padding">
     <div class="grid-width">
-        <h2><?php $kalender_widget_title = get_field_object($calendar_section, $homeInterface); 
+        <h2><?php $kalender_widget_title = get_field_object($calendar_section, $homeInterface);
         echo $kalender_widget_title['value']; ?></h2>
 
         <!--Row of cards, overflow on mobile-->
     <div class="row row_margin">
-			<?php 
+			<?php
 			// Ensure the global $post variable is in scope
 			global $post;
 
@@ -100,7 +100,7 @@ of the parent page. The taxonomy is the parent_slug variable.
 
 					$content = $final_content['value'];
 					//tests if language is english
-					if ($language == 2) { 
+					if ($language == 2) {
 						$title_english = get_field_object($page_title_en, $post->ID);
 						$title = $title_english['value'];
 					} else {
@@ -111,14 +111,26 @@ of the parent page. The taxonomy is the parent_slug variable.
 					<!--Event card-->
 		            <div class="event_card" onclick="location.href='<?php echo the_permalink();?><?php echo $languageURL; ?>';">
 		            	<div class="subcontainer">
-			                <p class="day"><?php echo tribe_get_start_date( null, false, 'j' ); ?><span class="month"><?php echo tribe_get_start_date( null, false, 'M' ); ?></span></p>
-			                <p class="where"><?php echo tribe_get_start_date( null, false, 'l \a\t g:ia' ); ?><br><?php echo tribe_get_venue ();?> </p>
-			                <p class="event_name"><?php echo $title; ?></p>
-			                <span class="event_description"><?php echo mb_strimwidth($content, 0, 90, '...'); ?></span>
+			                <p class="day">
+												<?php echo tribe_get_start_date( null, false, 'j' ); ?>
+													<span class="month"><?php echo tribe_get_start_date( null, false, 'M' ); ?>
+												</span>
+											</p>
+			                <p class="where">
+												<?php echo tribe_get_start_date( null, false, 'l \a\t g:ia' ); ?>
+												<br>
+												<?php echo tribe_get_venue ();?>
+											</p>
+			                <p class="event_name">
+												<?php echo $title; ?>
+											</p>
+			                <span class="event_description">
+												<?php echo mb_strimwidth($content, 0, 90, '...'); ?>
+											</span>
 		            	</div>
 		        	</div>
 		            <!--End of Event card-->
-		            <?php 
+		            <?php
 		        } ?>
 
         </div>
@@ -126,11 +138,10 @@ of the parent page. The taxonomy is the parent_slug variable.
 
          <a class="more_events" href="<?php echo esc_url( home_url( '/kalender' ) ) . $languageURL; ?>">
 
-			<?php $seeMoreLabel = get_field_object($seeMore, $eventsWidget); 
+			<?php $seeMoreLabel = get_field_object($seeMore, $eventsWidget);
 			    echo $seeMoreLabel['value']; ?>
 
          	<img src="<?php bloginfo('template_url');?>/imgs/icon/arrow-right-yellow.svg"></a>
     </div>
 </section>
 <!--End of Our next events section-->
-
