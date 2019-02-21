@@ -80,11 +80,27 @@
                     ?>
 
                     <div class="newsletter">
+
                         <p><?php echo $final_footer_newsletter['value']; ?></p>
-                        <form id="form1" action="#hehe" method="get">
-                            <input type="text" placeholder="<?php  echo $final_footer_placeholder['value']; ?>">
-                            <button class="newsletter_btn" type="submit" form="form1"><img src="<?php bloginfo('template_url');?>/imgs/icon/arrow-right.svg"></button>
-                        </form>
+
+                        <!-- Begin Mailchimp Signup Form -->
+                        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                        <div id="mc_embed_signup">
+                          <form action="https://ksg-leipzig.us7.list-manage.com/subscribe/post?u=1acfa0b1009d9674d2122417c&amp;id=fa3320acfc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <input type="email" value="" name="EMAIL" class="newsletter_input" id="mce-EMAIL" placeholder="<?php  echo $final_footer_placeholder['value']; ?>" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                              <input type="text" name="b_1acfa0b1009d9674d2122417c_fa3320acfc" tabindex="-1" value="">
+                            </div>
+                            <button class="newsletter_btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                              <img src="<?php bloginfo('template_url');?>/imgs/icon/arrow-right.svg">
+                            </button>
+                          </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+
+
+
                     </div>
                     <div class="contact">
                         <p class="darkgray"><?php  echo $final_footer_title['value']; ?></p>

@@ -978,7 +978,7 @@ footer {
           height: 20px;
           position: absolute;
           right: 20px;
-          top: 20px;
+          top: 32px;
           border: 0;
           background-color: transparent;
           outline: 0;
@@ -1210,4 +1210,21 @@ footer {
 @media (max-width: 767px) {
   #menu-untoggle {
   }
+}
+
+.newsletter_input {
+  background-color: #f0f0f0;
+  color: #4A4A4A;
+  border: none;
+  padding: 20px;
+  outline: 0;
+  font-size: 16px;
+  position: relative;
+  width: calc(100% - 40px);
+  border-radius: unset;
+  height: 100%;
+  font-weight: normal;
+}
+#mc_embed_signup form {
+    margin: 0;
 }
