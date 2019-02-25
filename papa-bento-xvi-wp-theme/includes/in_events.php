@@ -79,17 +79,19 @@ of the parent page. The taxonomy is the parent_slug variable.
 
 		    $queryEvents = tribe_get_events( array(
 		                'posts_per_page' => 4,
+										'start_date' => date( 'Y-m-d H:i:s' )
 		                ) );
 		}
 		if ((is_page(array($uberuns, $gemeindeleben)) || (is_page() && $post->post_parent ) )) {
 			$queryEvents = tribe_get_events( array(
 				'posts_per_page' => 4,
+				'start_date' => date( 'Y-m-d H:i:s' ),
                 'tax_query' => array(
                         array (
                             'taxonomy' => 'tribe_events_cat',
                             'field' => 'slug',
-                            'terms' => $parent_slug,
-                        )
+                            'terms' => $parent_slug
+												)
                     ),
 				) );
 }
@@ -125,7 +127,10 @@ of the parent page. The taxonomy is the parent_slug variable.
 												<?php echo $title; ?>
 											</p>
 			                <span class="event_description">
-												<?php echo mb_strimwidth($content, 0, 90, '...'); ?>
+												<?php
+												$text = mb_strimwidth($content, 0, 90, '...');
+												echo strip_tags($text);
+												?>
 											</span>
 		            	</div>
 		        	</div>

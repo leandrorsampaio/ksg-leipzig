@@ -262,4 +262,24 @@ $("#gemen").mouseup(function(){
         } else {
         //if is Deutsche, displays the page title
             echo get_the_title($impressum); } ?></li></a>
+
+
+
+    <span class="sidebar-item">
+        <li class="sidebar-item-li">
+          <div class="sidebar-item-li-all">
+            <div class="sidebar-item-li-wrapper">
+                <a class="sidebar-item-li-wrapper-link" href="<?php echo get_bloginfo('url'); ?>?lang=de"><img src="<?php bloginfo('template_url');?>/imgs/flagmenu_de.png" />Deutsch</a>
+            </div>
+            <div class="sidebar-item-li-wrapper">
+                <a class="sidebar-item-li-wrapper-link" href="<?php echo get_bloginfo('url'); ?>?lang=en"><img src="<?php bloginfo('template_url');?>/imgs/flagmenu_uk.png" />English</a>
+            </div>
+          <div>
+        </li>
+    </span>
+
+
+
+
+
 </div>

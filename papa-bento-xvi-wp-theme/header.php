@@ -22,6 +22,7 @@
 
 
 
+
 		<script type="text/javascript">
 					// Test if there is lang code
 					var url = window.location.href;
@@ -33,6 +34,7 @@
 						 window.location.href = url;
 					}
 		</script>
+
 
 
 
@@ -93,8 +95,8 @@
                         $('.hl__options').css({"top":"-10px"});
                         $('.hl__options').css({"visibility":"visible"});
                     });
-                    </script>
-                    <a class="margin-left-40" id="search"><img src="<?php bloginfo('template_url');?>/imgs/icon/search.svg" class="menu-icon"><p>Search</p></a>
+  									</script>
+                    <a class="margin-left-40 trigger-search" id="search"><img src="<?php bloginfo('template_url');?>/imgs/icon/search.svg" class="menu-icon"><p>Search</p></a>
                     <a id="menu-toggle" class="margin-left-40"><img src="<?php bloginfo('template_url');?>/imgs/icon/menu.svg" class="menu-icon"><p>Menu</p></a>
                 </div>
                 <!--End of Desktop items for the menu-->
@@ -105,6 +107,14 @@
                 </div>
             </div>
             <?php include ('searchform.php') ;?>
+
+
+						<script>
+						$(".trigger-search").click(function(){
+							$(".search-form").toggle();
+							console.log('LOOOL');
+						});
+						</script>
         </div>
     </header>
 

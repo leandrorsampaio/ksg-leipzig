@@ -154,7 +154,7 @@ h2 {
       width: 1440px; } }
 
 article {
-  margin-top: 120px;
+  margin-top: 135px;
 }
 .article-width {
   margin: 0 auto;
@@ -163,6 +163,8 @@ article {
   .article-width h1 {
     text-align: center;
     margin-bottom: 60px; }
+    .article-width ul {
+      margin-bottom: 20px; }
   .article-width img {
     width: 100%;
     height: 100%;
@@ -190,6 +192,10 @@ article {
         width: 640px;
         margin: 0 auto;
         margin-bottom: 20px; }
+      .article-width ul {
+        width: 640px;
+        margin: 0 auto;
+        margin-bottom: 20px; }
       .article-width img {
         max-width: 100%;
         width: 100%;
@@ -202,6 +208,10 @@ article {
         width: 640px;
         margin: 0 auto;
         margin-bottom: 20px; }
+        .article-width ul {
+          width: 640px;
+          margin: 0 auto;
+          margin-bottom: 20px; }
       .article-width img {
         max-width: 100%;
         width: 100%;
@@ -238,7 +248,7 @@ section {
 
 .tns-outer {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 135px;
   height: 500px;
   position: relative; }
   @media (max-width: 900px) {
@@ -441,7 +451,7 @@ header {
       z-index: 3; }
       header .logo-container .logo img {
         margin-left: 0;
-        max-height: 80px;
+        max-height: 96px;
         -webkit-transition: all 250ms ease-in-out;
         -moz-transition: all 250ms ease-in-out;
         -o-transition: all 250ms ease-in-out;
@@ -451,11 +461,11 @@ header {
           header .logo-container .logo img {
             max-height: 60px; } }
   header .container {
-    height: 80px;
+    height: 96px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 80px; }
+    margin-left: 96px; }
     header .container .items {
       position: relative;
       display: flex; }
@@ -516,8 +526,11 @@ header {
         .hl__option a { font-size: 14px !important }
           .hl__option a img { width: 30px; height: 20px; object-fit: cover; margin-right: 10px; margin-left: 0 }
 
-form[role=search] { width: 100%; background: purple; height: 60px; position: relative; box-sizing: border-box; border: 1px solid #e5e5e5; text-align: center; margin-top: 20px; margin-bottom: 10px; visibility: hidden; display: none; opacity: 0; }
-  form[role=search] label { display: none; }
+.search-form {
+  display: none;
+}
+form[role=search] { width: 100%; height: 60px; position: relative; box-sizing: border-box; border: 1px solid #e5e5e5; text-align: center; margin-top: 20px; margin-bottom: 10px; }
+  form[role=search] label { }
   form[role=search] input { width: 100%; position: relative; height: 100%; border: 0; outline: 0; font-size: 18px; font-family: 'Lato', sans-serif; padding: 0 20px; font-weight: 400; color: #4a4a4a; }
   form[role=search] button { height: 80%; padding: 0 20px; position: absolute; top: 10%; right: 10px; border: 0; background-color: #172E7C; color: white; outline: 0; font-weight: 700; cursor: pointer; }
 
@@ -636,7 +649,8 @@ form[role=search] { width: 100%; background: purple; height: 60px; position: rel
     #news .news_link h2 {
       display: flex;
       align-items: center;
-      position: relative; }
+      position: relative;
+        padding-right: 25px;}
       #news .news_link h2 img {
         width: 24px;
         height: 24px;
@@ -656,7 +670,7 @@ form[role=search] { width: 100%; background: purple; height: 60px; position: rel
     color: #FFBB00; }
   #news .news_feature:after {
     content: "";
-    background-image: url("imgs/icon/bell.svg");
+    /*background-image: url("imgs/icon/bell.svg");*/
     background-size: 100%;
     background-repeat: no-repeat;
     width: 24px;
@@ -687,7 +701,8 @@ form[role=search] { width: 100%; background: purple; height: 60px; position: rel
   background-color: #172E7C;
   color: #ffffff; }
   #next_events_overview h2 {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+      font-size: 48px; }
   #next_events_overview .more_events {
     color: #FFBB00;
     float: right;
@@ -1058,6 +1073,12 @@ footer {
     background-color: transparent;
     border-radius: 50px;
     color: rgba(0,0,0, 0.25);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a, .tribe-events-calendar td div[id*=tribe-events-daynum-], td.tribe-events-past div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-]>a {
     font-size: 24px;
@@ -1227,4 +1248,162 @@ footer {
 }
 #mc_embed_signup form {
     margin: 0;
+}
+.tribe-events-sub-nav {
+  width: 100% !important;
+  padding-top: 20px !important;
+}
+.event_description {
+  opacity: 0.5;
+}
+.article-width table {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.article-width table tr {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 900px) {
+  .article-width table tr {
+    flex-direction: column;
+  }
+}
+.article-width table tr td {
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.article-width table tr td img {
+  margin: 0;
+}
+.article-width table tr td p {
+  width: 100%;
+}
+.tribe-events-calendar tbody tr {
+  max-width: 100%;
+}
+.tribe-events-calendar thead tr {
+  max-width: 100%;
+}
+.tribe-events-calendar {
+  max-width: 100% !important;
+}
+.article-width h1, .article-width h2, .article-width h3, .article-width h4, .article-width h5, .article-width h6 {
+  max-width: 640px;
+  margin: 0 auto;
+margin-bottom: 20px;
+}
+.search-no-result {
+  min-height: 250px;
+}
+.search-no-result p {
+  text-align: center;
+}
+.result-search-item-text {
+  text-align: center !important;
+}
+
+.sidebar-item {
+}
+.sidebar-item-li {
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20px;
+  padding-top: 35px !important;
+}
+.sidebar-item-li-all {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sidebar-item-li-wrapper {
+  display: flex;
+  width: 15%;
+  margin-right: 25px;
+}
+.sidebar-item-li-wrapper-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #4A4A4A;
+}
+.sidebar-item-li-wrapper-link img {
+  display: block;
+  width: 52px;
+  height: 32px;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+blockquote {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+.pagination .screen-reader-text {
+    display: none;
+}
+.page-numbers {
+  margin: 0 8px;
+  font-weight: normal;
+  font-size: 13px;
+}
+.page-numbers .screen-reader-text {
+  display: block;
+  margin: 0 4px;
+}
+.page-numbers.current {
+    display: flex;
+}
+.search-form .screen-reader-text {
+  display: none;
+}
+.screen-reader-text-button {
+  display: block !important;
+}
+
+.tribe-events-calendar td div {
+  padding: 0 !important;
+  line-height: inherit  !important;
+}
+.tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
+  width: 35px !important;
+  height: 33px !important;
+  border-radius: 100px !important;
+  font-size: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 25px !important;
+  padding: 0 !important;
+  margin: 0;
+}
+.tribe-events-calendar div[id*=tribe-events-daynum-] {
+  margin: 20px ;
+}
+.tribe-events-calendar thead th {
+  text-align: center;
+}
+.tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title a {
+    margin: 0 0 0 10px;
 }

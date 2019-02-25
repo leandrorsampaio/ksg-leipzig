@@ -179,10 +179,15 @@ $contentFeatured = get_field($lang_content);
               <?php
               if ($language == 2) {
                 echo "<h2>" . $final_title['value'] . "</h2>";
-                echo "<p>" . mb_strimwidth($contentFeatured, 0, 100, "...") . "</p>";
+                $text = mb_strimwidth($contentFeatured, 0, 300, '...');
+                echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+
               } else {
                 echo "<h2>" . get_the_title() . "</h2>";
-                echo "<p>" . mb_strimwidth($contentFeatured, 0, 100, "...") . "</p>";
+                $text = mb_strimwidth($contentFeatured, 0, 300, '...');
+                echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+
+
               }
               ?>
             </a>
@@ -206,14 +211,23 @@ $contentFeatured = get_field($lang_content);
     				);
 
     				$noResults = new WP_Query( $args );
-    				while ($noResults->have_posts()) : $noResults->the_post(); ?>
+    				while ($noResults->have_posts()) : $noResults->the_post();
 
-    			<p><?php echo get_field('no_results_message_en') ?></p>
+            if ($langCode == 'en') {
+                ?>
+                <div class="search-no-result"><p><?php echo get_field('no_results_message_en') ?></p></div>
+              <?php
+            } else {
+              ?>
 
+              <div class="search-no-result"><p><?php echo get_field('no_results_message_de') ?></p></div>
+
+            <?php
+            }
+
+            ?>
     			<?php endwhile;
     			wp_reset_query();
-
-    			get_search_form();
 
     		endif;
     		?>
