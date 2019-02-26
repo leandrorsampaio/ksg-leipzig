@@ -229,17 +229,17 @@
             }
         });
 
-        $('#search').mouseup(function(){
-            if ( $('form[role=search]').hasClass("search__open") ) {
-                $('form[role=search]').css({"opacity":"0"});
-                $('form[role=search]').css({"display":"none"});
-                $('form[role=search]').css({"visibility":"hidden"});
-                $('form[role=search]').removeClass('search__open');
+        $('#open-search').mouseup(function(){
+            if ( $('#search-header').hasClass("search__open") ) {
+                $('#search-header').css({"opacity":"0"});
+                $('#search-header').css({"display":"none"});
+                $('#search-header').css({"visibility":"hidden"});
+                $('#search-header').removeClass('search__open');
             } else {
-                $('form[role=search]').css({"opacity":"1"});
-                $('form[role=search]').css({"display":"block"});
-                $('form[role=search]').css({"visibility":"visible"});
-                $('form[role=search]').addClass('search__open');
+                $('#search-header').css({"opacity":"1"});
+                $('#search-header').css({"display":"block"});
+                $('#search-header').css({"visibility":"visible"});
+                $('#search-header').addClass('search__open');
             }
         });
     </script>
