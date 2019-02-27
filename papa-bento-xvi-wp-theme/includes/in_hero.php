@@ -139,7 +139,7 @@ var slider = tns({
 	axis: 'horizontal',
 	items: 1,
     slideBy: 'page',
-	autoplay: false,
+	autoplay: true,
 	controls: 'true',
 	nav: 'true',
 	arrowKeys: 'true',
