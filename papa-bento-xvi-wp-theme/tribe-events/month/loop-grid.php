@@ -18,7 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 $days_of_week = tribe_events_get_days_of_week();
 $week = 0;
 global $wp_locale;
-$langCode = $_GET['lang'];
+
+
+if (empty($_GET['lang'])) {
+	$langCode = 'de';
+} else {
+	$langCode = $_GET['lang'];
+}
+
 
 if ($langCode == 'en') {
     $language = 2; //EN
@@ -31,6 +38,8 @@ if ($langCode == 'en') {
     $languageCode = 'de';
     $flag = 'lang-de.svg';
 }
+
+
 
 ?>
 

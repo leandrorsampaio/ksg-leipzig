@@ -39,6 +39,10 @@
 
 
 	<?php
+
+		// Turn off all error reporting
+		error_reporting(0);
+
     // includes WP_head
     wp_head();
 

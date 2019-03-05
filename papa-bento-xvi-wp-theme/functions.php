@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Papa Bento XVI WP Theme - functions and definitions
  *
@@ -27,7 +28,7 @@ add_filter( 'wp_calculate_image_srcset', 'disable_sourceset' );
 function remove_image_size_attributes( $html ) {
     return preg_replace( '/(width|height)="\d*"/', '', $html );
     }
-    
+
 // Remove image size attributes from post thumbnails
 add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
 
@@ -57,9 +58,9 @@ add_theme_support( 'custom-logo', array(
 	'flex-height' => true,
 ) );
 
-/* 
+/*
  * Enable and create Custom Post Types.
- * 
+ *
 */
 add_action( 'init', 'register_cpt_featured' );
 /*
@@ -136,7 +137,7 @@ function register_cpt_interface() {
     register_post_type('interface', $args);
 }
 /*
-Displays featured image column on admin post list page 
+Displays featured image column on admin post list page
 for the custom post type Featured.
 
 	This function rewrites the HTML of the admin list page, with the given
@@ -153,7 +154,7 @@ for the custom post type Featured.
 	    return $columns;
 	}
 	/*
-	The filter adds our custom admin HTML 
+	The filter adds our custom admin HTML
 	to the custom post type FEATURED.
 	*/
 	add_filter('manage_featured_posts_columns' , 'custom_columns');
@@ -165,11 +166,11 @@ for the custom post type Featured.
 	        break;
 	    }
 	}
-	add_action( 'manage_featured_posts_custom_column' , 'custom_columns_data', 10, 2 ); 
+	add_action( 'manage_featured_posts_custom_column' , 'custom_columns_data', 10, 2 );
 
 
 /*
-* Customize Login page and dashboard of Wordpress Admin 
+* Customize Login page and dashboard of Wordpress Admin
 *
 *
 * Change Logo at Login/Register Page
@@ -196,24 +197,24 @@ function my_custom_dashboard_widgets() {
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
     // remove_action( 'welcome_panel', 'wp_welcome_panel' );
     remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
-    remove_meta_box( 'woocommerce_dashboard_recent_reviews', 'dashboard', 'normal'); 
-   
+    remove_meta_box( 'woocommerce_dashboard_recent_reviews', 'dashboard', 'normal');
+
     add_meta_box('developer', 'Welcome to KSG!', 'dashboard_developer', 'dashboard', 'side', 'high');
 }
 /* Create a custom box in welcome panel
 *
 */
 function dashboard_developer() {
-    echo 
+    echo
     '<p>Welcome to the KSG website admin!</p>
-    
+
      <p style="text-align: center">
      <img src="';
      echo bloginfo ('template_url');
      echo '/imgs/logo.svg">
      </p>';
 }
-//The function __return_false is a small built-in function that simply returns false. 
+//The function __return_false is a small built-in function that simply returns false.
 //It will stop WordPress from using default gallery style.
 add_filter( 'use_default_gallery_style', '__return_false' );
 
@@ -222,7 +223,7 @@ function wpb_change_search_url() {
     if ( is_search() && ! empty( $_GET['s'] ) ) {
         wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
         exit();
-    }   
+    }
 }
 add_action( 'template_redirect', 'wpb_change_search_url' );
 
@@ -1928,5 +1929,5 @@ add_action( 'template_redirect', 'wpb_change_search_url' );
 // ));
 
 // endif;
-	
+
 ?>

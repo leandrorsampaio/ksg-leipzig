@@ -11,7 +11,11 @@
 	//include ('includes/in_programmer.php');
 
 
-	$langCode = $_GET['lang'];
+	if (empty($_GET['lang'])) {
+		$langCode = 'de';
+	} else {
+		$langCode = $_GET['lang'];
+	}
 
 	global $language;
 	global $languageURL;
@@ -84,9 +88,9 @@ if ( has_post_thumbnail() ) { ?>
 		<div class="article-width">
 			<h1>
 				<?php
-				//The title for Events Page 
+				//The title for Events Page
 				if( tribe_is_month() && !is_tax() ) {
-					
+
 					//Calendar Section
 					// Deutsche
 					$calendar_section_title_de = 'calendar_section_title_de';
@@ -103,7 +107,7 @@ if ( has_post_thumbnail() ) { ?>
 
 					// sections titles
 					$final_calendar_section_title = get_field_object($calendar_section);
-					$kalender_widget_title = get_field_object($calendar_section, 26); 
+					$kalender_widget_title = get_field_object($calendar_section, 26);
 					echo $kalender_widget_title['value'];
 					    } else {
 

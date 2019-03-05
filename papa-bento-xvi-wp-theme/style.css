@@ -695,11 +695,14 @@ form[role=search] { width: 100%; height: 60px; position: relative; box-sizing: b
     }
 
 .news__single {
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  max-width: 640px;
+  margin: 0 auto;
+}
 .news__single h2 {
   flex: 0 0 100%;
   display: flex;
-  align-items: center; }
+  align-items: flex-start; }
 .news__single h2 img {
   margin: 2px 0 0 10px; }
 .news__single p {
@@ -1291,9 +1294,13 @@ footer {
 }
 .article-width table tr td img {
   margin: 0;
+  object-fit: cover;
 }
 .article-width table tr td p {
   width: 100%;
+}
+.article-width table tr td p:last-of-type {
+  margin-bottom: 0;
 }
 .tribe-events-calendar tbody tr {
   max-width: 100%;
@@ -1415,7 +1422,8 @@ blockquote {
   text-align: center;
 }
 .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title a {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 0;
+    padding-left: 10px;
 }
 .navigation.pagination .meta-nav {
   display: none;
@@ -1429,4 +1437,78 @@ blockquote {
 .zeroevents {
   color: #ffffff;
   text-align: center;
+}
+@media (max-width: 900px) {
+  .tribe-events-calendar thead tr {
+      display: table;
+  }
+}
+@media (max-width: 900px) {
+  .tribe-events-calendar tbody tr {
+    display: flex;
+    flex-direction: row;
+  }
+  .tribe-events-calendar tbody tr td::after  {
+    display: none !important;
+    content: none !important;
+  }
+
+  .tribe-events-calendar tbody tr td.tribe-events-has-events  {
+    background-color: rgba(33, 117, 155, 0.2);
+  }
+}
+.tribe-events-header b {
+    display: none;
+}
+.envira-gallery-wrap {
+    max-width: 640px;
+}
+.gallery {
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.gallery .gallery-item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.gallery .gallery-item img {
+  margin: 0 !important;
+}
+.gallery .gallery-item .gallery-caption {
+  text-align: center;
+  font-size: 11px;
+  font-style: italic;
+}
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+  width: 33.3332%;
+}
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+  width: 16.66665%;
+}
+.gallery-columns-7 .gallery-item {
+  width: 14.26%;
+}
+.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+  width: 11.10%;
+}
+.gallery-columns-10 .gallery-item {
+  width: 10%;
 }

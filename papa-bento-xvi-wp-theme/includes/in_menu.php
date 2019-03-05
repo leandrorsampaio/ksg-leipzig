@@ -1,7 +1,15 @@
 
 
 <?php
-$langCode = $_GET['lang'];
+
+if (empty($_GET['lang'])) {
+	$langCode = 'de';
+} else {
+	$langCode = $_GET['lang'];
+}
+
+
+
 
 if ($langCode == 'en') {
     $language = 2; //EN
