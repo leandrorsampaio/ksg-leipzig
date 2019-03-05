@@ -21,9 +21,9 @@ get_header();
 		// End the loop.
 		endwhile;
 
-		//Displays the Events Widget in all the pages, except the Events Single
-		if( tribe_is_event() && is_single() ) { // Single Events
-		} else { 
+		//Displays the Events Widget in all the pages, except the Events Single and the Agenda Page
+		if( tribe_is_event() && is_single() || is_post_type_archive() ) {
+		} else {
 			include ('includes/in_events.php');
 		}
 		?>

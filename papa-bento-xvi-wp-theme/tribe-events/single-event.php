@@ -29,7 +29,7 @@ $event_id = get_the_ID();
 	</p> -->
 
 	<!-- Notices -->
-	<?php tribe_the_notices() ?> 
+	<?php tribe_the_notices() ?>
 
 
 	<div class="tribe-events-schedule tribe-clearfix">
@@ -58,6 +58,9 @@ $event_id = get_the_ID();
 			<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
 
 			<!-- Event content -->
+
+
+
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 			<!-- <div class="tribe-events-single-event-description tribe-events-content"> -->
 				<?php // the_content(); ?>
@@ -74,4 +77,3 @@ $event_id = get_the_ID();
 	<?php endwhile; ?>
 
 </div>
-

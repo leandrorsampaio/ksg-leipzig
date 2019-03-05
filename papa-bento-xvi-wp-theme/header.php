@@ -67,7 +67,7 @@
 
 </head>
 
-<body>
+<body id="lang-body-<?php echo $languageCode; ?>">
     <?php
     //includes the main Menu
     include ('includes/in_menu.php');
