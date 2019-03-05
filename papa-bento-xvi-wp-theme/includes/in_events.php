@@ -75,7 +75,6 @@ of the parent page. The taxonomy is the parent_slug variable.
 */
 
 
-
 		if ((is_single()) || (is_home()) || (is_page()) )  {
 
 		    $queryEvents = tribe_get_events( array(
@@ -83,15 +82,12 @@ of the parent page. The taxonomy is the parent_slug variable.
 										'start_date' => date( 'Y-m-d H:i:s' )
 		                ) );
 		}
-		global $post;
-
 		if ((is_page(array($uberuns, $gemeindeleben)) || (is_page() && $post->post_parent ) )) {
 
+
 			global $post;
-	    // $post_slug_new = $post->post_name;
-		//Get the page parent's slug
-	    $post_data = get_post($post->post_parent);
-	    $parent_slug = $post_data->post_name;
+	    $post_slug_new = $post->post_name;
+
 
 			$queryEvents = tribe_get_events( array(
 				'posts_per_page' => 4,
@@ -100,11 +96,15 @@ of the parent page. The taxonomy is the parent_slug variable.
                         array (
                             'taxonomy' => 'tribe_events_cat',
                             'field' => 'slug',
-                            'terms' => $parent_slug
-												),
+                            'terms' => $post_slug_new
+												)
                     ),
 				) );
 }
+
+
+
+
 
 
 if($queryEvents) {
@@ -159,16 +159,11 @@ if($queryEvents) {
 		        }
 } else {
 
-	// if ($languageCode == 'en') {
-	// echo '<p class="zeroevents">' . 'Sorry. There is no events for this category.' . '</p>';
-	// } else {
-	// echo '<p class="zeroevents">' . 'Entschuldigung. Für diese Kategorie sind keine Veranstaltungen vorhanden.' . '</p>';
-	// }
-
-			    $queryEvents = tribe_get_events( array(
-		                'posts_per_page' => 4,
-										'start_date' => date( 'Y-m-d H:i:s' )
-		                ) );
+	if ($languageCode == 'en') {
+	echo '<p class="zeroevents">' . 'Sorry. There is no events for this category.' . '</p>';
+	} else {
+	echo '<p class="zeroevents">' . 'Entschuldigung. Für diese Kategorie sind keine Veranstaltungen vorhanden.' . '</p>';
+	}
 
 }
 						?>

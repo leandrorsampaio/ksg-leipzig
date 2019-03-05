@@ -96,7 +96,7 @@ if ($languageCode == 'en') {
 $final_title = get_field_object($lang_title);
 $final_content = get_field_object($lang_content);
 
-$contentFeatured = get_field($lang_content);
+$contentFeatured = get_field_object($lang_content);
 
 
 ?>
@@ -172,13 +172,31 @@ $contentFeatured = get_field($lang_content);
 
     				// $content = the_content();
 
+
+
+            if ($languageCode == 'en') {
+             // ---------------- SINGLE NEWS
+                $lang_title = $lang_title_en;
+                $lang_content = $lang_content_en;
+            } else {
+                $lang_title = '';
+                $lang_content = $lang_content_de;
+            }
+
+
+            $final_title = get_field_object($lang_title);
+    				$titleFeatured = $final_title['value'];
+
+            $final_content = get_field_object($lang_content);
+    				$contentFeatured = $final_content['value'];
+
     				?>
 
 
             <a class="result-search-item" href="<?php echo the_permalink();?><?php echo $languageURL; ?>">
               <?php
               if ($language == 2) {
-                echo "<h2>" . $final_title['value'] . "</h2>";
+                echo "<h2>" . $titleFeatured . "</h2>";
                 $text = mb_strimwidth($contentFeatured, 0, 300, '...');
                 echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
 
