@@ -33,6 +33,7 @@
 						 url += '?lang=de';
 						 window.location.href = url;
 					}
+
 		</script>
 
 

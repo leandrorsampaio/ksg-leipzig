@@ -1608,3 +1608,32 @@ blockquote {
 .tribe-events-meta-group.tribe-events-meta-group-details .tribe-events-event-categories a {
   padding-left: 5px;
 }
+
+
+
+
+.tribe-events-loop {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+.tribe-events-loop .type-tribe_events {
+  border-bottom: 1px solid #f0f0f0 !important;
+  padding-bottom: 2em  !important;
+}
+
+#tribe-bar-views-option-photo {
+  display: none !important;
+}
+
+.tribe-week-day-header-1 a span,
+.tribe-week-day-header-2 a span,
+.tribe-week-day-header-3 a span,
+.tribe-week-day-header-4 a span,
+.tribe-week-day-header-5 a span,
+.tribe-week-day-header-6 a span,
+.tribe-week-day-header-7 a span,
+.tribe-week-day-header-0 a span {
+  width: 100%;
+  text-align: center;
+}
