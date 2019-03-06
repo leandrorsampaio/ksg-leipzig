@@ -14,8 +14,15 @@ get_header();
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
-			// Include the page content template.
-			get_template_part( 'content', 'page');
+
+      $postid = get_the_ID();
+
+      if ($postid != 451) {
+        // Include the page content template.
+  			get_template_part( 'content', 'page');
+      } else {
+        include ('includes/news_home.php');
+      }
 
 
 		// End the loop.

@@ -116,9 +116,10 @@
 						<script>
 						$(".trigger-search").click(function(){
 							$(".search-form").toggle();
-							console.log('LOOOL');
 						});
 						</script>
+
+
         </div>
     </header>
 

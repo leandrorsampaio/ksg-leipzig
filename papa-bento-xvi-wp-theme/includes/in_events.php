@@ -75,14 +75,14 @@ of the parent page. The taxonomy is the parent_slug variable.
 */
 
 
-		if ((is_single()) || (is_home()) || (is_page()) )  {
+		if (is_page(array(453, 455, 457)))  {
 
 		    $queryEvents = tribe_get_events( array(
 		                'posts_per_page' => 4,
 										'start_date' => date( 'Y-m-d H:i:s' )
 		                ) );
-		}
-		if ((is_page(array($uberuns, $gemeindeleben)) || (is_page() && $post->post_parent ) )) {
+
+		} elseif (is_page() && $post->post_parent ) {
 
 
 			global $post;
@@ -100,6 +100,16 @@ of the parent page. The taxonomy is the parent_slug variable.
 												)
                     ),
 				) );
+
+
+} else {
+
+	$queryEvents = tribe_get_events( array(
+							'posts_per_page' => 4,
+							'start_date' => date( 'Y-m-d H:i:s' )
+							) );
+
+
 }
 
 
@@ -148,8 +158,8 @@ if($queryEvents) {
 											</p>
 			                <span class="event_description">
 												<?php
-												$text = mb_strimwidth($content, 0, 90, '...');
-												echo strip_tags($text);
+												//$text = mb_strimwidth($content, 0, 90, '...');
+												//echo strip_tags($text);
 												?>
 											</span>
 		            	</div>
