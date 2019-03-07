@@ -54,11 +54,16 @@
 		    $languageURL = '?lang=en';
 				$languageCode = 'en';
 				$flag = 'lang-uk.svg';
+				//
+				$searchtextbutton = 'search';
+
 		} else {
 				$language = 1; //DE (default)
 			 	$languageURL = '?lang=de';
 			 	$languageCode = 'de';
 			 	$flag = 'lang-de.svg';
+				//
+				$searchtextbutton = 'Suche';
 		}
     ?>
 
@@ -101,7 +106,12 @@
                         $('.hl__options').css({"visibility":"visible"});
                     });
   									</script>
-                    <a class="margin-left-40 trigger-search" id="search"><img src="<?php bloginfo('template_url');?>/imgs/icon/search.svg" class="menu-icon"><p>Search</p></a>
+
+
+
+
+
+                    <a class="margin-left-40 trigger-search" id="search"><img src="<?php bloginfo('template_url');?>/imgs/icon/search.svg" class="menu-icon"><p><?php echo $searchtextbutton; ?></p></a>
                     <a id="menu-toggle" class="margin-left-40"><img src="<?php bloginfo('template_url');?>/imgs/icon/menu.svg" class="menu-icon"><p>Menu</p></a>
                 </div>
                 <!--End of Desktop items for the menu-->

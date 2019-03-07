@@ -149,7 +149,14 @@ if($queryEvents) {
 												</span>
 											</p>
 			                <p class="where">
-												<?php echo tribe_get_start_date( null, false, 'l \a\t g:ia' ); ?>
+												<?php
+												if ($languageCode == 'en') {
+														echo tribe_get_start_date( null, false, 'l \a\t g:i a' );
+												} else {
+														echo tribe_get_start_date( null, false, 'l \a\t H:i' );
+														echo ' Uhr';
+												}
+												?>
 												<br>
 												<?php echo tribe_get_venue ();?>
 											</p>
