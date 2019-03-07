@@ -1686,3 +1686,33 @@ blockquote {
 .tribe-events-single ul.tribe-related-events {
     margin: 0 auto !important;
 }
+#tribe-events-footer .tribe-events-sub-nav {
+  max-width: 100%;
+}
+
+#tribe-mobile-container {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.tribe-events-ajax-loading.tribe-events-active-spinner {
+  width: 20px !important;
+  height: 20px !important;
+}
+.tribe-events-ajax-loading.tribe-events-active-spinner img {
+  margin: 0 !important;
+}
+@media (max-width: 900px) {
+  .tribe-events-mobile.tribe_events .summary {
+    text-align: center !important;
+  margin: 0 auto !important;
+  }
+  .tribe-events-mobile.tribe_events .summary a {
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .tribe-events-mobile.tribe_events {
+        margin-top: 0 !important;
+  }
+}
