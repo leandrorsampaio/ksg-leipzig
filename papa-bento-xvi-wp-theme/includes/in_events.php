@@ -144,7 +144,7 @@ if($queryEvents) {
 		            <div class="event_card" onclick="location.href='<?php echo the_permalink();?><?php echo $languageURL; ?>';">
 		            	<div class="subcontainer">
 			                <p class="day">
-												<?php echo tribe_get_start_date( null, false, 'j' ); ?>
+												<?php echo tribe_get_start_date( null, false, 'j' ); ?>. 
 													<span class="month"><?php echo tribe_get_start_date( null, false, 'M' ); ?>
 												</span>
 											</p>
@@ -153,7 +153,7 @@ if($queryEvents) {
 												if ($languageCode == 'en') {
 														echo tribe_get_start_date( null, false, 'l \a\t g:i a' );
 												} else {
-														echo tribe_get_start_date( null, false, 'l \a\t H:i' );
+														echo tribe_get_start_date( null, false, 'l \u\m H:i' );
 														echo ' Uhr';
 												}
 												?>

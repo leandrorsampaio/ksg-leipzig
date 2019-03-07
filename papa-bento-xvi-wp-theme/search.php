@@ -144,12 +144,21 @@ $contentFeatured = get_field_object($lang_content);
 					'post_type' => 'interface',
 					);
 
-				$searchNoResults = new WP_Query( $args );
-				while ($searchNoResults->have_posts()) : $searchNoResults->the_post();  ?>
+        $searchNoResults = new WP_Query( $args );
+				while ($searchNoResults->have_posts()) : $searchNoResults->the_post();
+
+        if ($languageCode == 'en') {
+         // ---------------- SINGLE NEWS
+            $textsearchresult = get_field('page_title_en');
+        } else {
+            $textsearchresult = get_field('page_title_de');
+        }
+
+        ?>
 
         <div class="full-width">
       		<div class="article-width">
-			         <h1 class="page-title page-title-search"><?php echo get_field('page_title_en') ?></h1>
+			         <h1 class="page-title page-title-search"><?php echo  $textsearchresult; ?></h1>
              </div>
            </div>
 			<?php endwhile;
