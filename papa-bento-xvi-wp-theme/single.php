@@ -17,7 +17,14 @@ get_header();
             /*
              * Include the post template for the content.
              */
+
+            echo '<div class="single-wrapper">';
+
+
             get_template_part( 'content', get_post_format() );
+
+
+            echo '</div>';
 
 
         // End the loop.

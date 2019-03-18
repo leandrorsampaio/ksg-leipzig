@@ -116,7 +116,7 @@ $contentFeatured = get_field_object($lang_content);
 				?>
 
         <div class="full-width">
-      		<div class="article-width">
+      		<div class="article-width-v2">
       			<h1 class="page-title page-title-search">
 
                 <?php
@@ -157,7 +157,7 @@ $contentFeatured = get_field_object($lang_content);
         ?>
 
         <div class="full-width">
-      		<div class="article-width">
+      		<div class="article-width-v2">
 			         <h1 class="page-title page-title-search"><?php echo  $textsearchresult; ?></h1>
              </div>
            </div>
@@ -171,7 +171,7 @@ $contentFeatured = get_field_object($lang_content);
 
 
     <div class="full-width">
-  		<div class="article-width">
+  		<div class="article-width-v2">
 
 
     		<?php

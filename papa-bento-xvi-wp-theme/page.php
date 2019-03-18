@@ -17,12 +17,14 @@ get_header();
 
       $postid = get_the_ID();
 
+      echo '<div class="single-wrapper">';
       if ($postid != 451) {
         // Include the page content template.
-  			get_template_part( 'content', 'page');
+      	get_template_part( 'content', 'page');
       } else {
         include ('includes/news_home.php');
       }
+      echo '</div>';
 
 
 		// End the loop.

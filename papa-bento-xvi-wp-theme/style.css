@@ -104,7 +104,7 @@ a {
 p {
   color: #4A4A4A;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
   margin-bottom: 20px; }
 
 h1 {
@@ -1090,6 +1090,7 @@ footer {
     font-weight: 400;
     padding: 0 0 10px;
     border: 1px solid #f5f5f5;
+    width: 100% !important;
 }
 .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-]>a{
     font-size: 24px;
@@ -1285,11 +1286,13 @@ footer {
 .event_description {
   opacity: 0.5;
 }
+.article-width-v2 table,
 .article-width table {
   max-width: 640px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
+.article-width-v2 table tr,
 .article-width table tr {
   max-width: 640px;
   width: 100%;
@@ -1297,10 +1300,12 @@ footer {
   flex-direction: row;
 }
 @media (max-width: 900px) {
+  .article-width-v2 table tr,
   .article-width table tr {
     flex-direction: column;
   }
 }
+.article-width-v2 table tr td,
 .article-width table tr td {
   padding: 10px;
   display: flex;
@@ -1311,17 +1316,21 @@ footer {
   line-height: 24px;
 }
 @media (max-width: 900px) {
+  .article-width-v2 table tr td,
   .article-width table tr td {
     width: auto !important;
   }
 }
+.article-width-v2 table tr td img,
 .article-width table tr td img {
   margin: 0;
   object-fit: cover;
 }
+.article-width-v2 table tr td p,
 .article-width table tr td p {
   width: 100%;
 }
+.article-width-v2 table tr td p:last-of-type,
 .article-width table tr td p:last-of-type {
   margin-bottom: 0;
 }
@@ -1490,7 +1499,6 @@ blockquote {
 .gallery {
   display: flex;
   width: 100%;
-  max-width: 640px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1500,6 +1508,8 @@ blockquote {
 }
 .gallery .gallery-item img {
   margin: 0 !important;
+  width: 100%;
+  height: auto;
 }
 .gallery .gallery-item .gallery-caption {
   text-align: center;
@@ -1659,7 +1669,8 @@ blockquote {
   padding-bottom: 2em  !important;
 }
 
-#tribe-bar-views-option-photo {
+#tribe-bar-views-option-photo,
+#tribe-bar-views-option-map {
   display: none !important;
 }
 
@@ -1755,4 +1766,212 @@ blockquote {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+
+
+
+
+
+.article-width-v2 {
+  margin: 0 auto;
+  width: auto;
+  position: relative;
+  padding: 60px 50px;
+  max-width: 900px;
+}
+.single-wrapper .article-width-v2 {
+  margin: 0 auto;
+  width: auto;
+  position: relative;
+  padding: 60px 50px;
+  max-width: 900px;
+}
+@media (max-width: 900px) {
+  .article-width-v2 {
+    padding: 60px 15px;
+  }
+  .single-wrapper .article-width-v2 {
+    padding: 60px 15px;
+  }
+}
+
+
+.article-width-v2 p blockquote,
+.article-width-v2 blockquote p  {
+  width: 100%;
+  padding: 0;
+}
+.article-width-v2 p a {
+  display: inline;
+}
+.article-width-v2 img {
+  margin: 0;
+  min-width: 150px;
+}
+.article-width-v2 table tr td img {
+  margin: 0;
+  min-width: unset;
+  width: 100%;
+}
+.article-width-v2 h1 {
+  text-align: center !important;
+}
+.article-width-v2 h1,
+.article-width-v2 h2,
+.article-width-v2 h3,
+.article-width-v2 h4,
+.article-width-v2 h5,
+.article-width-v2 h6,
+.article-width-v2 p,
+.article-width-v2 ul,
+.article-width-v2 ol,
+.article-width-v2 table,
+.article-width-v2 blockquote {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.article-width-v2 ul ul,
+.article-width-v2 ol ul,
+.article-width-v2 ul ol,
+.article-width-v2 ol ol {
+  padding-left: 0;
+  padding-right: 0;
+}
+.article-width-v2 ul,
+.article-width-v2 ol {
+  list-style-position: inside;
+}
+.article-width-v2 ul li,
+.article-width-v2 ol li {
+  margin: 10px 0;
+}
+.article-width-v2 h1,
+.article-width-v2 h2,
+.article-width-v2 h3,
+.article-width-v2 h4,
+.article-width-v2 h5,
+.article-width-v2 h6 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.article-width-v2 .alignnone {
+    margin: 5px 20px 0 0;
+}
+.article-width-v2 .aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 20px auto;
+}
+.article-width-v2 .alignright {
+    float:right;
+    margin: 5px 0 0 20px;
+}
+.article-width-v2 .alignleft {
+    float: left;
+    margin: 5px 20px 0 0;
+}
+.article-width-v2 a img.alignright {
+    float: right;
+    margin: 5px 0 0 20px;
+}
+.article-width-v2 a img.alignnone {
+    margin: 5px 20px 0 0;
+}
+.article-width-v2 a img.alignleft {
+    float: left;
+    margin: 5px 20px 0 0;
+}
+.article-width-v2 a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-width-v2 .wp-caption {
+    background: #fff;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.article-width-v2 .wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.article-width-v2 .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+.article-width-v2 .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.article-width-v2 .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+.article-width-v2 .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+/* Text meant only for screen readers. */
+.article-width-v2 .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.article-width-v2 .screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+
+@media (max-width: 600px) {
+  .article-width-v2 img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+  }
+  .article-width-v2 h1,
+  .article-width-v2 h2,
+  .article-width-v2 h3,
+  .article-width-v2 h4,
+  .article-width-v2 h5,
+  .article-width-v2 h6,
+  .article-width-v2 p,
+  .article-width-v2 ul,
+  .article-width-v2 ol,
+  .article-width-v2 table,
+  .article-width-v2 blockquote {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

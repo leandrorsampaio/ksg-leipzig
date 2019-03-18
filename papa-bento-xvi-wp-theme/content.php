@@ -85,7 +85,10 @@ if ( has_post_thumbnail() ) { ?>
 
 <!--Article post content-->
 	<div class="full-width">
-		<div class="article-width">
+		<div class="article-width-v2">
+
+
+
 			<h1>
 				<?php
 				//The title for Events Page
@@ -131,6 +134,7 @@ if ( has_post_thumbnail() ) { ?>
 				include ('includes/temp_news.php');
 
 			} else {
+
 				echo $final_content['value'];
 				echo the_content();
 				// echo the_title();

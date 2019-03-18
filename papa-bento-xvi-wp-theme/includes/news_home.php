@@ -42,7 +42,7 @@
 		<div class="page-header">
 
 			<div class="full-width">
-				<div class="article-width">
+				<div class="article-width-v2">
 					<h1 class="page-title page-title-search">
 
 						News
