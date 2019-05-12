@@ -1236,15 +1236,23 @@ footer {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 20px;
   text-align: center;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
+
+
+
 .result-search-item:last-of-type {
   border-bottom: 1px solid #ffffff;
 }
 .page-title-search {
   text-align: center;
 }
+.page-title-search-subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 50px;
+} 
 
 .sidebar-item {
   width: 100%;
@@ -1356,7 +1364,7 @@ margin-bottom: 20px;
   text-align: center;
 }
 .result-search-item-text {
-  text-align: center !important;
+  text-align: left;
   font-weight: normal;
 }
 

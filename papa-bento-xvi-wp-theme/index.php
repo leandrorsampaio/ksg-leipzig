@@ -266,8 +266,27 @@ endif;
         </h2>
 
         <?php
-        	//get the content and set a character limit to 200 characters and displays "..." in the end */
-          echo '<p>' . mb_strimwidth($contentFeatured, 0, 100, "...") . '</p>';
+					//get the content and set a character limit to 200 characters and displays "..." in the end */
+					
+
+
+					if ($langCode == 'en') {
+						if (get_field('summary_en')) {
+							echo "<p>" . get_field('summary_en') . "</p>";
+						} else {
+							echo '<p>' . mb_strimwidth($contentFeatured, 0, 100, "...") . '</p>';
+						}	
+					} else {
+						if (get_field('summary_en')) {
+							echo "<p>" . get_field('summary_en') . "</p>";
+						} else {
+							echo '<p>' . mb_strimwidth($contentFeatured, 0, 100, "...") . '</p>';
+						}	
+					}
+
+					
+
+          
         ?>
       </a>
 

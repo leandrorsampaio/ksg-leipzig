@@ -43,12 +43,17 @@
 
 			<div class="full-width">
 				<div class="article-width-v2">
-					<h1 class="page-title page-title-search">
+					<h1 class="page-title page-title-search">News</h1>
+					<?php
+					if ($languageCode == 'en') {
+						echo '<p class="page-title-search-subtitle">Here you can find all important and current news concerning community life:</p>';
+					} else {
+						echo '<p class="page-title-search-subtitle">Hier findest du alle wichtigen und aktuellen Nachrichten, die das Gemeindeleben betreffen:</p>';
+					}
+	?>
+				
 
-						News
-
-						</h1>
-
+					
 
 
 
@@ -69,7 +74,6 @@
 			if ($languageCode == 'en') {
 			 // ---------------- SINGLE NEWS
 					$lang_title = 'title_en';
-
 					$lang_content = $lang_content_en;
 			} else {
 					$lang_title = '';
@@ -79,11 +83,11 @@
 
 			$final_title = get_field_object($lang_title);
 			$titleFeatured = $final_title['value'];
+			$titleFeatured = $final_title['value'];
+			
 
 			$final_content = get_field_object($lang_content);
 			$contentFeatured = $final_content['value'];
-
-
 
 			?>
 
@@ -93,14 +97,24 @@
 				<?php
 				if ($language == 2) {
 					echo "<h2>" . $titleFeatured . "</h2>";
-					$text = mb_strimwidth($contentFeatured, 0, 300, '...');
-					echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+
+
+					if (get_field('summary_en')) {
+						echo "<p class='result-search-item-text'>" . get_field('summary_en') . "</p>";
+					} else {
+						$text = mb_strimwidth($contentFeatured, 0, 300, '...');
+						echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+					}	
 
 				} else {
 					echo "<h2>" . get_the_title() . "</h2>";
-					$text = mb_strimwidth($contentFeatured, 0, 300, '...');
-					echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
-
+					
+					if (get_field('summary_de')) {
+						echo "<p class='result-search-item-text'>" . get_field('summary_de') . "</p>";
+					} else {
+						$text = mb_strimwidth($contentFeatured, 0, 300, '...');
+						echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+					}
 
 				}
 				?>

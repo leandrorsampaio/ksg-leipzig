@@ -206,14 +206,27 @@ $contentFeatured = get_field_object($lang_content);
               <?php
               if ($language == 2) {
                 echo "<h2>" . $titleFeatured . "</h2>";
-                $text = mb_strimwidth($contentFeatured, 0, 300, '...');
-                echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+                
+
+                if (get_field('summary_en')) {
+                  echo "<p class='result-search-item-text'>" . get_field('summary_en') . "</p>";
+                } else {
+                  $text = mb_strimwidth($contentFeatured, 0, 300, '...');
+                  echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+                }	
+
+
 
               } else {
                 echo "<h2>" . get_the_title() . "</h2>";
-                $text = mb_strimwidth($contentFeatured, 0, 300, '...');
-                echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
-
+                
+                
+                if (get_field('summary_de')) {
+                  echo "<p class='result-search-item-text'>" . get_field('summary_de') . "</p>";
+                } else {
+                  $text = mb_strimwidth($contentFeatured, 0, 300, '...');
+                  echo "<p class='result-search-item-text'>" . strip_tags($text) . "</p>";
+                }
 
               }
               ?>
