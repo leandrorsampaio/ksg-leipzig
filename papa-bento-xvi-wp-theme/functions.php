@@ -220,7 +220,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 function wpb_change_search_url() {
-    if ( is_search() && ! empty( $_GET['s'] ) ) {
+	if ( is_search() && ! empty( $_GET['s'] ) ) {
         wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
         exit();
     }

@@ -13,8 +13,6 @@
  */
 
 
-
-
 if (isset($_GET['lang'])) {
   $langCode = $_GET['lang'];
 } else {
@@ -33,12 +31,14 @@ if ($langCode == 'en') {
 		$languageURL = '?lang=en';
 		$languageCode = 'en';
 		$flag = 'lang-de.svg';
+    
 } else {
 		//DE (default)
 		$language = 1;
 		$languageURL = '?lang=de';
 		$languageCode = 'de';
 		$flag = 'lang-uk.svg';
+    
 }
 
 
@@ -127,6 +127,10 @@ endif;
 	$final_welcome_text = get_field_object($welcome_text);
 	$final_welcome_link = get_field_object($welcome_link);
 	$final_welcome_link_label = get_field_object($welcome_link_label);
+
+
+
+
 
 	?>
 

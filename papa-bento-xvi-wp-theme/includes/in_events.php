@@ -17,6 +17,7 @@ Includes Programmer Module, with all the variables */
 	$lang_content = $lang_content_de;
 	}
 
+
 	//content
 	$final_title = get_field_object($lang_title);
 	$final_content = get_field_object($lang_content);
@@ -125,26 +126,28 @@ if($queryEvents) {
 					//$content = $final_content['value'];
 
 					//tests if language is english
-					if ($language == 2) {
-						$title_english = get_field_object($page_title_en, $post->ID);
-						$title = $title_english['value'];
 
-						$content_english = get_field_object($lang_content_en, $post->ID);
-						$content = $content_english['value'];
+						if ($language == 2) {
+							$title_english = get_field_object($page_title_en, $post->ID);
+							$title = $title_english['value'];
 
-					} else {
-					//or if languague is deutsche
-						$title = $post->post_title;
+							$content_english = get_field_object($lang_content_en, $post->ID);
+							$content = $content_english['value'];
 
-						$content_deutsch = get_field_object($lang_content_de, $post->ID);
-						$content = $content_deutsch['value'];
-					}
+						} else {
+						//or if languague is deutsche
+							$title = $post->post_title;
+
+							$content_deutsch = get_field_object($lang_content_de, $post->ID);
+							$content = $content_deutsch['value'];
+						}
+
 					?>
 					<!--Event card-->
 		            <div class="event_card" onclick="location.href='<?php echo the_permalink();?><?php echo $languageURL; ?>';">
 		            	<div class="subcontainer">
 			                <p class="day">
-												<?php echo tribe_get_start_date( null, false, 'j' ); ?>. 
+												<?php echo tribe_get_start_date( null, false, 'j' ); ?>.
 													<span class="month"><?php echo tribe_get_start_date( null, false, 'M' ); ?>
 												</span>
 											</p>

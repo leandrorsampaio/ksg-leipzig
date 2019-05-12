@@ -33,9 +33,7 @@
 						 url += '?lang=de';
 						 window.location.href = url;
 					}
-
 		</script>
-
 
 
 
@@ -65,7 +63,8 @@
 				//
 				$searchtextbutton = 'Suche';
 		}
-    ?>
+
+  ?>
 
 
 
@@ -73,7 +72,9 @@
 
 </head>
 
-<body id="lang-body-<?php echo $languageCode; ?>">
+<body id="lang-body-<?php echo $languageCode; ?>" data-site="<?php echo body_class(); ?>">
+
+
     <?php
     //includes the main Menu
     include ('includes/in_menu.php');
