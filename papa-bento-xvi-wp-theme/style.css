@@ -1984,3 +1984,31 @@ div.aligncenter {
     padding-right: 10px;
   }
 }
+
+#lang-body- .trans_en {
+  display: none;
+}
+#lang-body-en .trans_de {
+  display: none;
+}
+#lang-body-de .trans_en {
+  display: none;
+}
+
+
+.single-event-page-ksg-wrapper-blue {
+  margin-left: -2000px;
+  margin-right: -2000px;
+  padding-left: 2000px;
+  padding-right: 2000px;
+  background-color: #172E7C;
+}
+.single-event-page-ksg-wrapper-blue .more_events {
+  display: none;
+}
+.single-event-page-ksg .tribe-events-related-events-title  {
+  display: none;
+}
+.single-event-page-ksg .tribe-related-events {
+  display: none;
+}

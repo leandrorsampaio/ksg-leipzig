@@ -21,6 +21,9 @@
     <script src="<?php bloginfo('template_url');?>/tinyslider.js"></script>
 
 
+    <script src="<?php bloginfo('template_url');?>/translator_ksg.js"></script>
+
+
 
 
 		<script type="text/javascript">
