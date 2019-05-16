@@ -388,7 +388,7 @@ section {
     z-index: 3; }
     @media (max-width: 900px) {
       .hero .container {
-        width: 80%; } }
+        width: 100%; } }
     .hero .container h1 {
       color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
       @media (max-width: 900px) {
@@ -399,7 +399,11 @@ section {
       color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
       @media (max-width: 900px) {
         .hero .container p {
-          color: black; text-shadow: 0 1px 2px rgba(0,0,0,0); }
+          color: black; text-shadow: 0 1px 2px rgba(0,0,0,0); text-align: justify; 
+          font-size: 15px;
+          line-height: 22px;
+          margin-bottom: 10px;
+        }
       }
     .hero .container .hero_btn {
       padding: 15px 20px;
@@ -1016,16 +1020,17 @@ footer {
             color: #9E9E9E;
             font-weight: 400; }
         footer .grid-width .newsletter form button {
-          height: 20px;
           position: absolute;
           right: 20px;
-          top: 32px;
           border: 0;
           background-color: transparent;
           outline: 0;
-          cursor: pointer; }
+          cursor: pointer; 
+          width: 34px;
+          height: 58px;
+          top: 0;}
           footer .grid-width .newsletter form button img {
-            height: 100%; }
+            width: 100%; }
     footer .grid-width .contact {
       flex: 0 0 15%; }
       @media (max-width: 900px) {
@@ -1136,6 +1141,7 @@ footer {
 .tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-event-]{
     padding: 0 10px 0 10px;
     background-color: transparent;
+    width: 100%;
 }
 /* Hover for every day */
 #tribe-events-content .tribe-events-calendar td:hover {
@@ -1287,6 +1293,8 @@ footer {
 }
 #mc_embed_signup form {
     margin: 0;
+    position: relative;
+    padding: 0 !important;
 }
 .tribe-events-sub-nav {
   width: 100% !important;
@@ -1364,7 +1372,7 @@ margin-bottom: 20px;
   text-align: center;
 }
 .result-search-item-text {
-  text-align: left;
+  text-align: justify;
   font-weight: normal;
 }
 
@@ -1844,12 +1852,13 @@ blockquote {
 .article-width-v2 ol ul,
 .article-width-v2 ul ol,
 .article-width-v2 ol ol {
-  padding-left: 0;
+  padding-left: 16px;
   padding-right: 0;
 }
 .article-width-v2 ul,
 .article-width-v2 ol {
-  list-style-position: inside;
+  list-style-position: initial;
+  padding-left: 18px;
 }
 .article-width-v2 ul li,
 .article-width-v2 ol li {
@@ -2006,9 +2015,18 @@ div.aligncenter {
 .single-event-page-ksg-wrapper-blue .more_events {
   display: none;
 }
+.single-event-page-ksg-wrapper-blue .row_margin .event_card:last-of-type {
+  display: none;
+}
 .single-event-page-ksg .tribe-events-related-events-title  {
   display: none;
 }
 .single-event-page-ksg .tribe-related-events {
   display: none;
 }
+
+.tribe-events-venue .tribe-events-venue-meta .tribe-venue-name {
+  display: none;
+}
+
+

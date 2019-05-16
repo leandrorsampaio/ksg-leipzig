@@ -104,6 +104,19 @@ include ('in_programmer.php');
         } else {
         //if is Deutsche, displays the page title
             echo get_the_title($unsere); } ?></li></a>
+
+        <a class="sidebar-item-sub" href="<?php echo get_permalink($protokoll) . $languageURL; ?>">
+            <li class="child">
+            <?php
+        //get field object PAGE_TITLE from the specific page ID
+            $protokoll_title = get_field_object('title_en', $protokoll);
+        //if language is English, displays the custom field
+        if ($language == 2) {
+            echo $protokoll_title['value'];
+        } else {
+        //if is Deutsche, displays the page title
+            echo get_the_title($protokoll); } ?></li></a>
+
     </ul>
 
 <script>

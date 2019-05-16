@@ -106,6 +106,7 @@ $kalender = 449;
 $uberuns = 453;
 $personen = 455;
 $unsere = 457;
+$protokoll = 1510;
 $gemeindeleben = 427;
 $heiligeMesse = 433;
 $musik = 431;

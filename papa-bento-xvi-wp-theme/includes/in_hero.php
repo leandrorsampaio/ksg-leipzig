@@ -8,7 +8,8 @@
 	/* Start the loop for Featured custom post */
 	$args = array(
 		'post_type' => 'featured',
-		'posts_per_page' => -1
+		'posts_per_page' => -1, 
+		'orderby' => 'date', 
 		);
 	$hero = new WP_Query( $args );
 	while ($hero->have_posts()) : $hero->the_post();
