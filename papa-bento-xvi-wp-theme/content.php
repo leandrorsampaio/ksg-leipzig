@@ -88,8 +88,7 @@ if ( has_post_thumbnail() ) { ?>
 		<div class="article-width-v2">
 
 
-
-			<h1>
+			<h1 class="title_general_all <?php if ( is_archive() ) { echo 'title_general_all-for-events-page'; } ?>">
 				<?php
 				//The title for Events Page
 				if( tribe_is_month() && !is_tax() ) {

@@ -4,7 +4,25 @@
  *
  * Contains the closing of the "site-content" div and all content after.
  *
-*/?>
+*/
+if (empty($_GET['lang'])) {
+	$langCode = 'de';
+} else {
+	$langCode = $_GET['lang'];
+}
+
+if ($langCode == 'en') {
+    $language = 2; //EN
+    $languageURL = '?lang=en';
+    $languageCode = 'en';
+    $flag = 'lang-uk.svg';
+} else {
+    $language = 1; //DE (default)
+    $languageURL = '?lang=de';
+    $languageCode = 'de';
+    $flag = 'lang-de.svg';
+}
+?>
 
         <footer class="full-width">
             <div class="grid-width">
@@ -28,12 +46,8 @@
                     ///////// Footer
                     /////////////////////
 
-                    global $footer_language;
-                    $footer_language = 1;
-                    //$footer_languageGet = $_GET['lang'];
-                    $footer_languageGet = 'de';
-
-                    if ($footer_languageGet == 'en') {
+                   
+                    if ($langCode == 'en') {
                         $footer_language = 2; //EN
                         $footer_languageURL = '?lang=en';
                     } else {

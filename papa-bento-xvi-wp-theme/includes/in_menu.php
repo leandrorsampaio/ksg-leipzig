@@ -2,14 +2,12 @@
 
 <?php
 
+
 if (empty($_GET['lang'])) {
 	$langCode = 'de';
 } else {
 	$langCode = $_GET['lang'];
 }
-
-
-
 
 if ($langCode == 'en') {
     $language = 2; //EN
@@ -23,6 +21,29 @@ if ($langCode == 'en') {
     $flag = 'lang-de.svg';
 }
 include ('in_programmer.php');
+
+
+//Start the loop of the post MENU - Menu (ID 1935) */
+$args = array(
+    'p' => 1935,
+    'post_type' => 'interface'
+);
+
+$menuWidget = new WP_Query( $args );
+while ($menuWidget->have_posts()) : $menuWidget->the_post();
+
+// PART 1
+$aboutus = 'menu_aboutus';
+$aboutus_link = get_field($aboutus, false, false);
+// PART 2
+$groups = 'menu_groups';
+$groups_link = get_field($groups, false, false);
+// PART 3
+$bottomlinks = 'menu_bottomlinks';
+$bottomlinks_link = get_field($bottomlinks, false, false);
+
+endwhile;
+wp_reset_query();
 ?>
 
 
@@ -70,52 +91,28 @@ include ('in_programmer.php');
     </li></a>
     <ul class="sidebar-item" id="uberuns-child" style="display:none;">
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($uberuns) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $uberuns_title = get_field_object('title_en', $uberuns);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $uberuns_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($uberuns); } ?></li></a>
+    <?php 
+    foreach( $aboutus_link as $url ): 
+        
+        if ($langCode == 'en') {
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($personen) . $languageURL; ?>">
-            <li class="child">
-            <?php
-        //get field object PAGE_TITLE from the specific page ID
-            $personen_title = get_field_object('title_en', $personen);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $personen_title['value'];
+            if (get_field( 'title_en', $url )) {
+                $lang_title = get_field( 'title_en', $url );
+            } else {
+                $lang_title = get_the_title($url);
+            }
         } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($personen); } ?></li></a>
+            $lang_title = get_the_title($url);
+        }
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($unsere) . $languageURL; ?>">
-            <li class="child">
-            <?php
-        //get field object PAGE_TITLE from the specific page ID
-            $unsere_title = get_field_object('title_en', $unsere);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $unsere_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($unsere); } ?></li></a>
-
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($protokoll) . $languageURL; ?>">
-            <li class="child">
-            <?php
-        //get field object PAGE_TITLE from the specific page ID
-            $protokoll_title = get_field_object('title_en', $protokoll);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $protokoll_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($protokoll); } ?></li></a>
+        echo '<a class="sidebar-item-sub" href="' . get_the_permalink($url) . $languageURL . '">';
+        echo '<li class="child">';
+        echo $lang_title;
+        echo '</li>';
+        echo '</a>';
+    
+    endforeach; 
+    ?>
 
     </ul>
 
@@ -140,105 +137,32 @@ $("#uberuns").mouseup(function(){
     </li></a>
 
     <ul class="sidebar-item" id="gemen-child" style="display:none;">
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($gemeindeleben) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $gemeindeleben_title = get_field_object('title_en', $gemeindeleben);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $gemeindeleben_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($gemeindeleben); } ?></li></a>
-
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($heiligeMesse) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $heiligeMesse_title = get_field_object('title_en', $heiligeMesse);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $heiligeMesse_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($heiligeMesse); } ?></li></a>
-
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($musik) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $musik_title = get_field_object('title_en', $musik);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $musik_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($musik); } ?></li></a>
-
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($laudes) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $laudes_title = get_field_object('title_en', $laudes);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $laudes_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($laudes); } ?></li></a>
-
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($chor) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $chor_title = get_field_object('title_en', $chor);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $chor_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($chor); } ?></li></a>
 
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($internationalerAbend) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $internationalerAbend_title = get_field_object('title_en', $internationalerAbend);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $internationalerAbend_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($internationalerAbend); } ?></li></a>
+<?php 
+    foreach( $groups_link as $url ): 
+        
+        if ($langCode == 'en') {
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($soziales) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $soziales_title = get_field_object('title_en', $soziales);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $soziales_title['value'];
+            if (get_field( 'title_en', $url )) {
+                $lang_title = get_field( 'title_en', $url );
+            } else {
+                $lang_title = get_the_title($url);
+            }
         } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($soziales); } ?></li></a>
+            $lang_title = get_the_title($url);
+        }
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($uberregionales) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $uberregionales_title = get_field_object('title_en', $uberregionales);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $uberregionales_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($uberregionales); } ?></li></a>
+        echo '<a class="sidebar-item-sub" href="' . get_the_permalink($url) . $languageURL . '">';
+        echo '<li class="child">';
+        echo $lang_title;
+        echo '</li>';
+        echo '</a>';
+    
+    endforeach; 
+    ?>
 
-        <a class="sidebar-item-sub" href="<?php echo get_permalink($okumene) . $languageURL; ?>">
-            <li class="child"><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $okumene_title = get_field_object('title_en', $okumene);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $okumene_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($okumene); } ?></li></a>
+
 
     </ul>
 
@@ -250,39 +174,29 @@ $("#gemen").mouseup(function(){
 });
 </script>
 
-    <a class="sidebar-item" href="<?php echo get_permalink($freundeskreis) . $languageURL; ?>">
-        <li><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $freundeskreis_title = get_field_object('title_en', $freundeskreis);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $freundeskreis_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($freundeskreis); } ?></li></a>
+<?php 
+    foreach( $bottomlinks_link as $url ): 
+        
+        if ($langCode == 'en') {
 
-
-    <a class="sidebar-item" href="<?php echo get_permalink($datens) . $languageURL; ?>">
-        <li><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $datens_title = get_field_object('title_en', $datens);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $datens_title['value'];
+            if (get_field( 'title_en', $url )) {
+                $lang_title = get_field( 'title_en', $url );
+            } else {
+                $lang_title = get_the_title($url);
+            }
         } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($datens); } ?></li></a>
+            $lang_title = get_the_title($url);
+        }
 
-    <a class="sidebar-item" href="<?php echo get_permalink($impressum) . $languageURL; ?>">
-        <li><?php
-        //get field object PAGE_TITLE from the specific page ID
-            $impressum_title = get_field_object('title_en', $impressum);
-        //if language is English, displays the custom field
-        if ($language == 2) {
-            echo $impressum_title['value'];
-        } else {
-        //if is Deutsche, displays the page title
-            echo get_the_title($impressum); } ?></li></a>
+        echo '<a class="sidebar-item" href="' . get_the_permalink($url) . $languageURL . '">';
+        echo '<li>';
+        echo $lang_title;
+        echo '</li>';
+        echo '</a>';
+    
+    endforeach; 
+    ?>
+
 
 
 

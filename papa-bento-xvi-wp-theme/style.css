@@ -1852,13 +1852,13 @@ blockquote {
 .article-width-v2 ol ul,
 .article-width-v2 ul ol,
 .article-width-v2 ol ol {
-  padding-left: 16px;
+  padding-left: 50px;
   padding-right: 0;
 }
 .article-width-v2 ul,
 .article-width-v2 ol {
   list-style-position: initial;
-  padding-left: 18px;
+  padding-left: 50px;
 }
 .article-width-v2 ul li,
 .article-width-v2 ol li {
@@ -2030,3 +2030,35 @@ div.aligncenter {
 }
 
 
+
+.tribe-events-single .tribe-events-meta-group-details .tribe-events-start-date-label {
+  display: block;
+  float: left;
+  margin: 10px 0 0 0;
+}
+.tribe-events-single .tribe-events-meta-group-details dd {
+  display: block;
+  float: left;
+  margin: 10px 0 0 5px;
+}
+.tribe-events-single .tribe-events-meta-group-details .tribe-events-start-time-label {
+  display: block;
+  float: left;
+  clear: left;
+  margin: 10px 0 0 0;
+}
+.tribe-events-single .tribe-events-meta-group-details .tribe-events-event-categories-label {
+  display: block;
+  float: left;
+  margin: 0;
+}
+.tribe-events-single .tribe-events-meta-group-details .tribe-events-event-categories {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+
+.title_general_all-for-events-page {
+  display: none;
+}
