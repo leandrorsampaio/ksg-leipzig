@@ -2074,3 +2074,18 @@ div.aligncenter {
 .tribe-events-venue-map img {
   min-width: auto !important;
 }
+
+
+.tribe-events-single-section .tribe-events-single-section-title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.tribe-events-single-section .tribe-events-single-section-title:after {
+  margin-left: 0 !important;
+}
+.tribe-events-single-section .tribe-events-event-categories {
+  margin-left: 0 !important;
+}
+.tribe-events-single-section .tribe-events-event-categories a {
+  padding-left: 0 !important;
+}
