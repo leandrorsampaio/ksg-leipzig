@@ -1863,6 +1863,7 @@ blockquote {
 .article-width-v2 ul li,
 .article-width-v2 ol li {
   margin: 10px 0;
+  line-height: 23px;
 }
 .article-width-v2 h1,
 .article-width-v2 h2,
@@ -2036,6 +2037,12 @@ div.aligncenter {
   float: left;
   margin: 10px 0 0 0;
 }
+.tribe-events-single .tribe-events-meta-group-details dt {
+  display: block;
+  float: left;
+  margin: 10px 0 0 0;
+  clear: both;
+}
 .tribe-events-single .tribe-events-meta-group-details dd {
   display: block;
   float: left;
@@ -2061,4 +2068,9 @@ div.aligncenter {
 
 .title_general_all-for-events-page {
   display: none;
+}
+
+
+.tribe-events-venue-map img {
+  min-width: auto !important;
 }

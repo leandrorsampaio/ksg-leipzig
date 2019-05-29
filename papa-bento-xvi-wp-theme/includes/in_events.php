@@ -154,7 +154,7 @@ if($queryEvents) {
 			                <p class="where">
 												<?php
 												if ($languageCode == 'en') {
-														echo tribe_get_start_date( null, false, 'l \a\t g:i a' );
+														echo '<span class="card_where_en_' . tribe_get_start_date( null, false, 'l' ) . '">' . tribe_get_start_date( null, false, 'l' ) . '</span> ' . tribe_get_start_date( null, false, '\a\t g:i a' );
 												} else {
 														echo tribe_get_start_date( null, false, 'l \u\m H:i' );
 														echo ' Uhr';

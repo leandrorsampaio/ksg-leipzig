@@ -10,7 +10,7 @@ $(document).ready(function(){
     $("#tribe-events-sonntag").html('<span class="trans_de">Sonntag</span><span class="trans_en">Sunday</span>');
 
 
-    //TITLEs
+    // TITLEs
     $(".tribe-events-page-title").html('<span class="trans_de">Anstehende Veranstaltungen</span><span class="trans_en">Upcoming events</span>');
     
     
@@ -20,6 +20,17 @@ $(document).ready(function(){
     $("#tribe-bar-views-option-month").html('<span class="tribe-icon-month" aria-hidden="true" role="none"></span><span class="trans_de">Monat</span><span class="trans_en">Month</span>');
     $("#tribe-bar-views-option-week").html('<span class="tribe-icon-week" aria-hidden="true" role="none"></span><span class="trans_de">Woche</span><span class="trans_en">Week</span>');
     $("#tribe-bar-views-option-day").html('<span class="tribe-icon-day" aria-hidden="true" role="none"></span><span class="trans_de">Tag</span><span class="trans_en">Day</span>');
+
+    // CARDS
+    $(".card_where_en_Montag").html('<span class="trans_de">Montag</span><span class="trans_en">Monday</span>');
+    $(".card_where_en_Dienstag").html('<span class="trans_de">Dienstag</span><span class="trans_en">Tuesday</span>');
+    $(".card_where_en_Mittwoch").html('<span class="trans_de">Mittwoch</span><span class="trans_en">Wednesday</span>');
+    $(".card_where_en_Donnerstag").html('<span class="trans_de">Donnerstag</span><span class="trans_en">Thursday</span>');
+    $(".card_where_en_Freitag").html('<span class="trans_de">Freitag</span><span class="trans_en">Friday</span>');
+    $(".card_where_en_Samstag").html('<span class="trans_de">Samstag</span><span class="trans_en">Saturday</span>');
+    $(".card_where_en_Sonntag").html('<span class="trans_de">Sonntag</span><span class="trans_en">Sunday</span>');
+
+
 
 
 });
