@@ -148,8 +148,11 @@ if($queryEvents) {
 		            	<div class="subcontainer">
 			                <p class="day">
 												<?php echo tribe_get_start_date( null, false, 'j' ); ?>.
-													<span class="month"><?php echo tribe_get_start_date( null, false, 'M' ); ?>
-												</span>
+													<span class="month">
+														<span class="card_month_de_<?php echo tribe_get_start_date( null, false, 'm' ); ?>">
+															<?php echo tribe_get_start_date( null, false, 'M' ); ?>
+														</span>
+													</span>
 											</p>
 			                <p class="where">
 												<?php

@@ -29,8 +29,19 @@ $(document).ready(function(){
     $(".card_where_en_Freitag").html('<span class="trans_de">Freitag</span><span class="trans_en">Friday</span>');
     $(".card_where_en_Samstag").html('<span class="trans_de">Samstag</span><span class="trans_en">Saturday</span>');
     $(".card_where_en_Sonntag").html('<span class="trans_de">Sonntag</span><span class="trans_en">Sunday</span>');
-
-
+    //
+    $(".card_month_de_01").html('<span class="trans_de">Jan</span><span class="trans_en">Jan</span>');
+    $(".card_month_de_02").html('<span class="trans_de">Feb</span><span class="trans_en">Feb</span>');
+    $(".card_month_de_03").html('<span class="trans_de">Mär</span><span class="trans_en">Mar</span>');
+    $(".card_month_de_04").html('<span class="trans_de">Apr</span><span class="trans_en">Apr</span>');
+    $(".card_month_de_05").html('<span class="trans_de">Mai</span><span class="trans_en">May</span>');
+    $(".card_month_de_06").html('<span class="trans_de">Jun</span><span class="trans_en">Jun</span>');
+    $(".card_month_de_07").html('<span class="trans_de">Jul</span><span class="trans_en">Jul</span>');
+    $(".card_month_de_08").html('<span class="trans_de">Aug</span><span class="trans_en">Aug</span>');
+    $(".card_month_de_09").html('<span class="trans_de">Sep</span><span class="trans_en">Sep</span>');
+    $(".card_month_de_10").html('<span class="trans_de">Okt</span><span class="trans_en">Oct</span>');
+    $(".card_month_de_11").html('<span class="trans_de">Nov</span><span class="trans_en">Nov</span>');
+    $(".card_month_de_12").html('<span class="trans_de">Dec</span><span class="trans_en">Dec</span>');
 
 
 });
